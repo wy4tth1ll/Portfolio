@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Merchandise | Wyatt Hill</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="images/logo3.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/logo.svg" alt="Wyatt Hill Logo">
+
+</a>
+
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>MERCHANDISE</h1>
+
+<p>
+A collection of some of my favorite merchandise and apparel collections that I have been apart of and designed in the past.
+</p>
+
+</div>
+
+</section>
+
+<section id="gallery" class="gallery">
+
+<h2>Selected Work</h2>
+
+<div class="slideshow-container">
+
+<button class="prev" onclick="changeSlide(-1)">
+&#10094;
+</button>
+
+<img id="slideshow-image" src="images/merch/1.jpg" alt="Merchandise">
+
+<button class="next" onclick="changeSlide(1)">
+&#10095;
+</button>
+
+</div>
+
+<div class="spotify-button-container">
+
+<a id="instagram-link" href="#" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+    <span>View Brand on Instagram</span>
+</a>
+
+</a>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Let's Work.</h2>
+
+<div class="contact-links">
+
+<a href="mailto:wyatthill128@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>wyatthill128@gmail.com</span>
+
+</a>
+
+<a href="https://www.instagram.com/wyattt.hilll/" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+<span>@wyattt.hilll</span>
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Wyatt Hill
+
+</footer>
+
+<script>
+
+const slides = [
+
+{
+image:"images/merch/1.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/2.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/3.jpg",
+instagram:"https://www.instagram.com/followthefishtv/"
+},
+
+{
+image:"images/merch/4.jpg",
+instagram:"https://www.instagram.com/followthefishtv/"
+},
+
+{
+image:"images/merch/5.jpg",
+instagram:"https://www.instagram.com/followthefishtv/"
+},
+
+{
+image:"images/merch/6.jpg",
+instagram:"https://www.instagram.com/g59records/"
+},
+
+{
+image:"images/merch/7.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/8.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/9.jpg",
+instagram:"https://www.instagram.com/suicideboys/"
+},
+
+{
+image:"images/merch/10.jpg",
+instagram:"https://www.instagram.com/kayzomusic/"
+},
+
+{
+image:"images/merch/11.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/12.jpg",
+instagram:"https://www.instagram.com/chrislake/"
+},
+
+{
+image:"images/merch/13.jpg",
+instagram:"https://www.instagram.com/iiipoints/"
+},
+
+{
+image:"images/merch/14.jpg",
+instagram:"https://www.instagram.com/iiipoints/"
+},
+
+{
+image:"images/merch/15.jpg",
+instagram:"https://www.instagram.com/iiipoints/"
+},
+
+{
+image:"images/merch/16.jpg",
+instagram:"https://www.instagram.com/drinkeasyrider/"
+},
+
+{
+image:"images/merch/17.jpg",
+instagram:"https://www.instagram.com/drinkeasyrider/"
+},
+
+{
+image:"images/merch/18.jpg",
+instagram:"https://www.instagram.com/laytongiordani/"
+},
+
+{
+image:"images/merch/19.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/20.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/21.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/22.jpg",
+instagram:"https://www.instagram.com/neverlonely.llc/"
+},
+
+{
+image:"images/merch/23.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/24.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/25.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/26.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/27.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/28.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/29.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/30.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/31.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/32.jpg",
+instagram:"https://www.instagram.com/drinkeasyrider/"
+},
+
+{
+image:"images/merch/33.jpg",
+instagram:"https://www.instagram.com/kayzomusic/"
+},
+
+{
+image:"images/merch/34.jpg",
+instagram:"https://www.instagram.com/cloonee/"
+},
+
+{
+image:"images/merch/35.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/36.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/37.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/38.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/39.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+},
+
+{
+image:"images/merch/40.jpg",
+instagram:"https://www.instagram.com/hellbentrecs/"
+}
+
+];
+
+let current = 0;
+
+function updateSlide(){
+
+    document.getElementById("slideshow-image").src = slides[current].image;
+
+    document.getElementById("instagram-link").href = slides[current].instagram;
+
+}
+
+function changeSlide(direction){
+
+    current += direction;
+
+    if(current < 0){
+        current = slides.length - 1;
+    }
+
+    if(current >= slides.length){
+        current = 0;
+    }
+
+    updateSlide();
+
+}
+
+updateSlide();
+
+</script>
+
+</body>
+
+</html>

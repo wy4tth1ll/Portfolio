@@ -1,0 +1,773 @@
+/* ==============================
+   WYATT HILL PORTFOLIO
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f7f7f4;
+    color:#111;
+    overflow-x:hidden;
+}
+
+/* ==============================
+LOADER
+============================== */
+
+.loader{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#111;
+
+}
+
+.loader img{
+
+    width:420px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+/* ==============================
+HEADER
+============================== */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    padding:30px 8%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(247,247,244,.92);
+    backdrop-filter:blur(14px);
+
+    z-index:999;
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo a{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    height:34px;
+
+    width:auto;
+
+    display:block;
+
+    transition:.3s ease;
+
+}
+
+.logo img:hover{
+
+    opacity:.6;
+
+}
+
+nav{
+
+    display:flex;
+    gap:45px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:#111;
+    font-size:.95rem;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    opacity:.45;
+
+}
+/* ==============================
+   MERCHANDISE SLIDESHOW
+============================== */
+
+.gallery{
+
+    padding:120px 8%;
+
+}
+
+.slideshow-container{
+
+    position:relative;
+
+    max-width:1400px;
+
+    margin:0 auto;
+
+}
+
+.slideshow-container img{
+
+    width:100%;
+    height:800px;
+
+    object-fit:contain;
+
+    background:#f3f3f3;
+
+    border-radius:20px;
+
+    display:block;
+
+}
+
+/* Navigation Arrows */
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+    transform:translateY(-50%);
+
+    width:62px;
+    height:62px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.92);
+
+    color:#111;
+
+    font-size:32px;
+    font-weight:300;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.18);
+
+    transition:all .25s ease;
+
+    z-index:100;
+
+    opacity:0;
+
+}
+
+/* Show arrows when hovering */
+
+.slideshow-container:hover .prev,
+.slideshow-container:hover .next{
+
+    opacity:1;
+
+}
+
+.prev{
+
+    left:25px;
+
+}
+
+.next{
+
+    right:25px;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    background:#111;
+
+    color:white;
+
+    transform:translateY(-50%) scale(1.08);
+
+}
+
+.prev:active,
+.next:active{
+
+    transform:translateY(-50%) scale(.95);
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.slideshow-container img{
+
+    height:500px;
+
+}
+
+.prev,
+.next{
+
+    width:50px;
+    height:50px;
+
+    font-size:24px;
+
+}
+
+}
+
+/* ==============================
+SPOTIFY BUTTON
+============================== */
+
+.spotify-button-container{
+
+    margin-top:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+#spotify-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 34px;
+
+    border:1px solid #111;
+
+    border-radius:999px;
+
+    background:white;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+#spotify-link i{
+
+    color:#1DB954;
+
+    font-size:22px;
+
+}
+
+#spotify-link:hover{
+
+    background:#111;
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+#spotify-link:hover i{
+
+    color:#1DB954;
+
+}
+
+/* ==============================
+INSTAGRAM BUTTON
+============================== */
+
+#instagram-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 32px;
+
+    border:1px solid #111;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+}
+
+#instagram-link i{
+
+    font-size:22px;
+
+    background:linear-gradient(
+        45deg,
+        #F58529,
+        #FEDA77,
+        #DD2A7B,
+        #8134AF,
+        #515BD4
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+}
+
+#instagram-link:hover{
+
+    background:#111;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==============================
+HERO
+============================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 8%;
+
+}
+
+.hero-text{
+
+    max-width:900px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(4rem,8vw,8rem);
+    line-height:.95;
+    font-weight:700;
+    margin-bottom:35px;
+
+}
+
+.hero p{
+
+    font-size:1.3rem;
+    color:#666;
+    line-height:1.7;
+    max-width:620px;
+    margin-bottom:50px;
+
+}
+
+.button{
+
+    display:inline-block;
+
+    padding:18px 38px;
+
+    border:1px solid black;
+
+    text-decoration:none;
+
+    color:black;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.button:hover{
+
+    background:black;
+    color:white;
+
+}
+
+/* ==============================
+SECTIONS
+============================== */
+
+section{
+
+    padding:120px 8%;
+
+}
+
+section h2{
+
+    font-size:2.4rem;
+    margin-bottom:60px;
+
+}
+
+/* ==============================
+FEATURED
+============================== */
+
+.featured-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+.project{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    border-radius:10px;
+
+}
+
+.project img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.5s;
+
+}
+
+.project:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:35px;
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.project:hover .overlay{
+
+    opacity:1;
+
+}
+
+.overlay h3{
+
+    font-size:1.6rem;
+
+    margin-bottom:8px;
+
+}
+
+.overlay p{
+
+    color:#ddd;
+
+}
+
+/* ==============================
+CATEGORIES
+============================== */
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+.category{
+
+    border:1px solid #ddd;
+
+    padding:70px 40px;
+
+    transition:.35s;
+
+}
+
+.category:hover{
+
+    background:black;
+
+    color:white;
+
+    transform:translateY(-6px);
+
+}
+
+.category h3{
+
+    font-size:2rem;
+
+}
+
+/* ==============================
+ABOUT
+============================== */
+
+.about{
+
+    max-width:900px;
+
+}
+
+.about p{
+
+    font-size:1.3rem;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/* ==============================
+CONTACT
+============================== */
+
+.contact h2{
+
+    font-size:4rem;
+
+    margin-bottom:45px;
+
+}
+
+.contact-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.contact-links a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    width:fit-content;
+
+    text-decoration:none;
+
+    color:#111;
+
+    font-size:1.25rem;
+
+    font-weight:500;
+
+    transition:.3s ease;
+
+}
+
+.contact-links a:hover{
+
+    opacity:.55;
+
+    transform:translateX(4px);
+
+}
+
+.contact-links .fa-envelope{
+
+    font-size:24px;
+
+    color:#111;
+
+}
+
+.contact-links .fa-instagram{
+
+    font-size:24px;
+
+    background:linear-gradient(
+        45deg,
+        #F58529,
+        #FEDA77,
+        #DD2A7B,
+        #8134AF,
+        #515BD4
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+
+}
+
+/* ==============================
+FOOTER
+============================== */
+
+footer{
+
+    padding:60px;
+
+    text-align:center;
+
+    border-top:1px solid #ddd;
+
+    color:#777;
+
+}
+
+/* ==============================
+SCROLLBAR
+============================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#111;
+
+}
+
+/* ==============================
+RESPONSIVE
+============================== */
+
+@media(max-width:900px){
+
+header{
+
+padding:25px 6%;
+
+}
+
+.hero{
+
+padding:0 6%;
+
+}
+
+section{
+
+padding:90px 6%;
+
+}
+
+.hero h1{
+
+font-size:4rem;
+
+}
+
+.contact h2{
+
+font-size:2.8rem;
+
+}
+
+nav{
+
+gap:25px;
+
+}
+
+}

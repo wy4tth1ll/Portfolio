@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Posters / Flyers | Wyatt Hill</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="images/logo3.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome (Spotify Icon) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="images/logo.svg" alt="Wyatt Hill Logo">
+
+</a>
+
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+POSTERS / FLYERS
+
+</h1>
+
+<p>
+
+A collection of my favorite event and tour flyers I have designed.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="gallery" class="gallery">
+
+<h2>
+
+Selected Work
+
+</h2>
+
+<div class="slideshow-container">
+
+<button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+<img id="slideshow-image" src="images/posters/1.jpg" alt="Poster">
+
+<button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Let's Work.</h2>
+
+<div class="contact-links">
+
+<a href="mailto:wyatthill128@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>wyatthill128@gmail.com</span>
+
+</a>
+
+<a href="https://www.instagram.com/wyattt.hilll/" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+<span>@wyattt.hilll</span>
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Wyatt Hill
+
+</footer>
+
+<script>
+
+const images = [
+
+"images/posters/1.jpg",
+"images/posters/2.jpg",
+"images/posters/3.jpg",
+"images/posters/4.jpg",
+"images/posters/5.jpg",
+"images/posters/6.jpg",
+"images/posters/7.jpg",
+"images/posters/8.jpg",
+"images/posters/9.jpg",
+"images/posters/10.jpg"
+
+];
+
+let current = 0;
+
+function changeSlide(direction){
+
+current += direction;
+
+if(current < 0){
+
+current = images.length-1;
+
+}
+
+if(current >= images.length){
+
+current = 0;
+
+}
+
+document.getElementById("slideshow-image").src = images[current];
+
+}
+
+</script>
+
+</body>
+
+</html>
